@@ -30,6 +30,17 @@ benchmarking.
 
 ## Reproduce
 
+Quick smoke checks:
+
+```bash
+go test ./ADAPT/... ./REG/...
+go run REG/main.go 20 10 -repeats=1 -cert=none -local=true
+go run REG/main.go 20 10 -repeats=1 -cert=online -local=true
+go run REG/main.go 20 10 -repeats=1 -cert=none -local=false -audit-exact=true
+```
+
+Full benchmark reproduction:
+
 ```bash
 REG/run_reg_benchmarks.sh
 REG/summarize_results.sh
@@ -39,3 +50,5 @@ go run REG/stats/main.go REG/results/*.csv
 
 The raw `.log` files include the ADAPT package initialization output and the reachable-state
 rejection demo. The `.csv` files contain only the machine-readable benchmark table.
+The full benchmark scripts overwrite files under `REG/results`; use a clean clone to preserve the
+checked-in result files unchanged.

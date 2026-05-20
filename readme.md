@@ -1,4 +1,107 @@
-# Implementation of ADAPT and FROST
+# REG-ADAPT artifact and ADAPT/FROST implementation
+
+This fork adds a REG-ADAPT artifact on top of the public ADAPT Go implementation.  REG-ADAPT wraps
+ADAPT-style local weighted update routines with:
+
+- epoch state and weight metadata,
+- stale-row and owner-bot public-row accounting,
+- final and transient exposure checks,
+- digest-bound old-epoch transition certificates,
+- exact-rank audit mode for GLI derivative rows, and
+- benchmark drivers and recorded benchmark outputs.
+
+The REG code lives in:
+
+- `ADAPT/algorithm/reg_guard.go`: guard state, ledger accounting, exact-rank audit, digest-bound
+  certification, and wrappers for the ADAPT local update routines.
+- `REG/main.go`: benchmark and demo driver.
+- `REG/*.sh`: reproduction and summary scripts.
+- `REG/results/`: recorded benchmark logs and CSV files.
+- `REG/stats/main.go`: mean/median/stddev summary tool.
+
+The original ADAPT/FROST implementation notes are kept below.
+
+## REG-ADAPT quick start
+
+From a fresh checkout:
+
+```bash
+git clone https://github.com/ainta/ADAPT_imple.git
+cd ADAPT_imple
+go mod download
+```
+
+Run package-level checks for the ADAPT and REG artifact packages:
+
+```bash
+go test ./ADAPT/... ./REG/...
+```
+
+The upstream repository has a pre-existing mixed-package layout in `FROST/algorithm`, so
+`go test ./...` is not the artifact check used here.
+
+Run one small metadata-only activation benchmark:
+
+```bash
+go run REG/main.go 20 10 -repeats=1 -cert=none -local=true
+```
+
+Run one digest-bound certificate benchmark:
+
+```bash
+go run REG/main.go 20 10 -repeats=1 -cert=online -local=true
+```
+
+Run one exact-rank audit benchmark without local ADAPT update cost:
+
+```bash
+go run REG/main.go 20 10 -repeats=1 -cert=none -local=false -audit-exact=true
+```
+
+Each run prints:
+
+- the ADAPT-style unsafe update-sequence demo, where REG rejects the final unsafe threshold
+  decrease;
+- the conservative-vs-exact rank tightness demo; and
+- a CSV table with guard, certificate, local-update, total, and exact-rank timing columns.
+
+## REG-ADAPT full benchmark reproduction
+
+The full benchmark matrix regenerates `REG/results` tables for `(N,t)=(20,10)`, `(40,20)`, and
+`(80,40)` across metadata-only, online-certificate, full-certificate, and diagnostic certificate
+modes:
+
+```bash
+REG/run_reg_benchmarks.sh
+REG/summarize_results.sh
+REG/run_reg_audit.sh
+go run REG/stats/main.go REG/results/*.csv
+```
+
+Outputs:
+
+- raw logs: `REG/results/*.log`
+- clean CSV files: `REG/results/*.csv`
+- aggregate summaries: `REG/results/summary.txt`, `REG/results/audit_summary.txt`,
+  `REG/results/stats.txt`
+
+The benchmark scripts intentionally overwrite files in `REG/results`.  Use a clean clone if you
+want to preserve the checked-in results unchanged.
+
+Certificate modes:
+
+- `-cert=none`: conservative metadata guard plus the underlying ADAPT local update.
+- `-cert=online`: metadata guard, digest-bound old-epoch sign/verify certificate, and ADAPT local
+  update.
+- `-cert=full`: nonce preprocessing plus digest-bound old-epoch certificate and ADAPT local update.
+- `-cert=both`: diagnostic mode that measures both certificate components in one run; do not use its
+  `total_ns` as a deployment total.
+
+Audit options:
+
+- `-audit-exact=true`: compute finite-field ranks for the ledger rows.
+- `-audit-point-offset=0`: match the public ADAPT artifact's participant-coordinate convention.
+- `-audit-point-offset=1`: use nonzero Shamir points for construction-level audits.
 
 ## Env
 - Go : 1.21
