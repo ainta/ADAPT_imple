@@ -1,0 +1,6 @@
+wrote REG/results/reg_adapt_20_10_audit.csv and REG/results/reg_adapt_20_10_audit.log
+wrote REG/results/reg_adapt_40_20_audit.csv and REG/results/reg_adapt_40_20_audit.log
+wrote REG/results/reg_adapt_80_40_audit.csv and REG/results/reg_adapt_80_40_audit.log
+reg_adapt_20_10_audit rows=120 accepted=120 avg_conservative_final=1.50 avg_exact_final=1.50 avg_conservative_transient=2.00 avg_exact_transient=2.00 avg_exact_audit_us=2.19
+reg_adapt_40_20_audit rows=120 accepted=120 avg_conservative_final=1.50 avg_exact_final=1.50 avg_conservative_transient=2.00 avg_exact_transient=2.00 avg_exact_audit_us=3.66
+reg_adapt_80_40_audit rows=120 accepted=120 avg_conservative_final=1.50 avg_exact_final=1.50 avg_conservative_transient=2.00 avg_exact_transient=2.00 avg_exact_audit_us=8.22

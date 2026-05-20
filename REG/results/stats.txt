@@ -1,0 +1,84 @@
+reg_adapt_20_10_audit.csv rows=120 accepted=120
+  metadata_guard_ns mean=14.024us median=14.021us stddev=1.002us
+  local_total_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_online_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_full_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  total_ns mean=0.014ms median=0.014ms stddev=0.001ms
+  exact_rank_audit_ns mean=2.187us median=2.375us stddev=0.964us
+reg_adapt_20_10_full.csv rows=120 accepted=120
+  metadata_guard_ns mean=17.708us median=17.042us stddev=2.281us
+  local_total_ns mean=8.618ms median=7.568ms stddev=2.289ms
+  cert_online_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_full_ns mean=4.966ms median=4.916ms stddev=0.290ms
+  total_ns mean=13.603ms median=12.557ms stddev=2.384ms
+  exact_rank_audit_ns mean=0.000us median=0.000us stddev=0.000us
+reg_adapt_20_10_none.csv rows=120 accepted=120
+  metadata_guard_ns mean=18.995us median=18.312us stddev=5.166us
+  local_total_ns mean=10.158ms median=8.341ms stddev=6.305ms
+  cert_online_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_full_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  total_ns mean=10.178ms median=8.360ms stddev=6.307ms
+  exact_rank_audit_ns mean=0.000us median=0.000us stddev=0.000us
+reg_adapt_20_10_online.csv rows=120 accepted=120
+  metadata_guard_ns mean=23.326us median=21.271us stddev=7.011us
+  local_total_ns mean=12.001ms median=9.978ms stddev=5.506ms
+  cert_online_ns mean=6.871ms median=5.861ms stddev=3.667ms
+  cert_full_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  total_ns mean=18.897ms median=15.942ms stddev=8.388ms
+  exact_rank_audit_ns mean=0.000us median=0.000us stddev=0.000us
+reg_adapt_40_20_audit.csv rows=120 accepted=120
+  metadata_guard_ns mean=17.343us median=17.458us stddev=1.340us
+  local_total_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_online_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_full_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  total_ns mean=0.017ms median=0.018ms stddev=0.001ms
+  exact_rank_audit_ns mean=3.663us median=3.792us stddev=1.252us
+reg_adapt_40_20_full.csv rows=120 accepted=120
+  metadata_guard_ns mean=16.652us median=15.812us stddev=3.318us
+  local_total_ns mean=29.100ms median=23.914ms stddev=10.820ms
+  cert_online_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_full_ns mean=12.156ms median=11.726ms stddev=2.715ms
+  total_ns mean=41.274ms median=35.516ms stddev=11.642ms
+  exact_rank_audit_ns mean=0.000us median=0.000us stddev=0.000us
+reg_adapt_40_20_none.csv rows=120 accepted=120
+  metadata_guard_ns mean=16.107us median=15.437us stddev=2.469us
+  local_total_ns mean=28.085ms median=23.625ms stddev=9.723ms
+  cert_online_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_full_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  total_ns mean=28.102ms median=23.642ms stddev=9.723ms
+  exact_rank_audit_ns mean=0.000us median=0.000us stddev=0.000us
+reg_adapt_40_20_online.csv rows=120 accepted=120
+  metadata_guard_ns mean=17.058us median=15.250us stddev=11.415us
+  local_total_ns mean=29.437ms median=23.836ms stddev=12.267ms
+  cert_online_ns mean=12.023ms median=11.149ms stddev=3.297ms
+  cert_full_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  total_ns mean=41.479ms median=34.946ms stddev=13.101ms
+  exact_rank_audit_ns mean=0.000us median=0.000us stddev=0.000us
+reg_adapt_80_40_audit.csv rows=120 accepted=120
+  metadata_guard_ns mean=25.761us median=23.729us stddev=15.548us
+  local_total_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_online_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_full_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  total_ns mean=0.026ms median=0.024ms stddev=0.016ms
+  exact_rank_audit_ns mean=8.219us median=7.125us stddev=7.576us
+reg_adapt_80_40_full.csv rows=120 accepted=120
+  metadata_guard_ns mean=18.891us median=17.021us stddev=6.822us
+  local_total_ns mean=153.022ms median=138.560ms stddev=41.639ms
+  cert_online_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_full_ns mean=53.232ms median=51.167ms stddev=13.226ms
+  total_ns mean=206.276ms median=190.640ms stddev=44.066ms
+  exact_rank_audit_ns mean=0.000us median=0.000us stddev=0.000us
+reg_adapt_80_40_none.csv rows=120 accepted=120
+  metadata_guard_ns mean=20.132us median=18.458us stddev=9.675us
+  local_total_ns mean=158.779ms median=137.227ms stddev=59.907ms
+  cert_online_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  cert_full_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  total_ns mean=158.800ms median=137.245ms stddev=59.908ms
+  exact_rank_audit_ns mean=0.000us median=0.000us stddev=0.000us
+reg_adapt_80_40_online.csv rows=120 accepted=120
+  metadata_guard_ns mean=17.046us median=16.146us stddev=3.737us
+  local_total_ns mean=143.988ms median=124.201ms stddev=48.596ms
+  cert_online_ns mean=48.859ms median=45.926ms stddev=9.474ms
+  cert_full_ns mean=0.000ms median=0.000ms stddev=0.000ms
+  total_ns mean=192.866ms median=176.017ms stddev=51.937ms
+  exact_rank_audit_ns mean=0.000us median=0.000us stddev=0.000us

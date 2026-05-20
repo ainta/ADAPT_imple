@@ -1,0 +1,146 @@
+=== Uniform Weight Distribution Mode ===
+
+--- Execution Info ---
+Total Participants: 16
+Total Threshold(Weight): 20
+Maximum Weight: 4
+
+Signing Participants:
+Participant 0 (Weight: 1)
+Participant 1 (Weight: 2)
+Participant 2 (Weight: 3)
+Participant 3 (Weight: 4)
+Participant 4 (Weight: 1)
+Participant 5 (Weight: 2)
+Participant 6 (Weight: 3)
+Participant 7 (Weight: 4)
+Signing Participants Total Weight: 20
+
+# REG-ADAPT benchmark
+# args_N=40 args_threshold=20 setup_ns=156947250 repeats=30 target=0 cert=none local=false stale_ttl=2 sequence=false audit_exact=true audit_point_offset=0
+# ADAPT-style sequence demo under REG metadata guard
+# demo_step=1 op=TIncrease delta=50 accepted=true old_t=100 new_t=150 final_exposure=99 transient_exposure=99 reason="accepted"
+# demo_step=2 op=WIncrease delta=50 accepted=true old_t=150 new_t=150 final_exposure=149 transient_exposure=149 reason="accepted"
+# demo_step=3 op=TDecrease delta=50 accepted=false old_t=150 new_t=100 final_exposure=199 transient_exposure=249 reason="final exposure reaches threshold"
+# exact-rank tightness demo threshold=2 conservative_final=2 exact_final=1 conservative_rejects=true exact_accepts=true
+op,target,delta,accepted,reason,old_epoch,new_epoch,old_t,new_t,old_exposure,final_exposure,transient_exposure,live_rows,stale_rows,public_rows,cert_weight,cert_verified,exact_final_rank,exact_transient_rank,metadata_guard_ns,cert_online_ns,cert_full_ns,local_compute_ns,local_verify_ns,local_update_ns,local_total_ns,total_ns,exact_rank_audit_ns
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,21958,0,0,0,0,0,0,22375,5959
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16917,0,0,0,0,0,0,16958,2958
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,18042,0,0,0,0,0,0,18125,3750
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,19000,0,0,0,0,0,0,19125,5125
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18166,0,0,0,0,0,0,18208,4584
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16166,0,0,0,0,0,0,16250,2459
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,17083,0,0,0,0,0,0,17167,3208
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17792,0,0,0,0,0,0,17875,4166
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17958,0,0,0,0,0,0,18042,4541
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15958,0,0,0,0,0,0,16041,2334
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16416,0,0,0,0,0,0,16500,2916
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17667,0,0,0,0,0,0,17750,4000
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17833,0,0,0,0,0,0,17917,4500
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16458,0,0,0,0,0,0,16583,2916
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,17291,0,0,0,0,0,0,17375,3666
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,18000,0,0,0,0,0,0,18083,4292
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17958,0,0,0,0,0,0,18084,4458
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15875,0,0,0,0,0,0,16000,2334
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16833,0,0,0,0,0,0,16959,3042
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17709,0,0,0,0,0,0,17791,3833
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17917,0,0,0,0,0,0,17958,4458
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15959,0,0,0,0,0,0,16041,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16833,0,0,0,0,0,0,16959,3083
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17583,0,0,0,0,0,0,17708,4000
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17916,0,0,0,0,0,0,18000,4459
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15875,0,0,0,0,0,0,16000,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16583,0,0,0,0,0,0,16667,2916
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,18375,0,0,0,0,0,0,18459,4208
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18500,0,0,0,0,0,0,18584,4958
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16083,0,0,0,0,0,0,16167,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16709,0,0,0,0,0,0,16791,2917
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17584,0,0,0,0,0,0,17708,4084
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18041,0,0,0,0,0,0,18083,4500
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15750,0,0,0,0,0,0,15792,2291
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16708,0,0,0,0,0,0,16792,2958
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17875,0,0,0,0,0,0,17958,4084
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17958,0,0,0,0,0,0,18084,4458
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15750,0,0,0,0,0,0,15834,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16833,0,0,0,0,0,0,16917,3250
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,20791,0,0,0,0,0,0,20875,7000
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18000,0,0,0,0,0,0,18125,4417
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15750,0,0,0,0,0,0,15875,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16583,0,0,0,0,0,0,16709,2916
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,18125,0,0,0,0,0,0,18209,4750
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18000,0,0,0,0,0,0,18125,4542
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15833,0,0,0,0,0,0,15916,2334
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16541,0,0,0,0,0,0,16667,2875
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17792,0,0,0,0,0,0,17875,4000
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18291,0,0,0,0,0,0,18333,4500
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15959,0,0,0,0,0,0,16000,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16542,0,0,0,0,0,0,16625,3083
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17667,0,0,0,0,0,0,17750,4167
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18000,0,0,0,0,0,0,18041,4459
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16000,0,0,0,0,0,0,16042,2541
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16917,0,0,0,0,0,0,17000,2875
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,20834,0,0,0,0,0,0,20916,3958
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18291,0,0,0,0,0,0,18417,4875
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15709,0,0,0,0,0,0,15791,2334
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16500,0,0,0,0,0,0,16583,2916
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17542,0,0,0,0,0,0,17625,3875
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17959,0,0,0,0,0,0,18083,4459
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16083,0,0,0,0,0,0,16167,2291
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16792,0,0,0,0,0,0,16875,2875
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17708,0,0,0,0,0,0,17792,4208
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18042,0,0,0,0,0,0,18083,4458
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16167,0,0,0,0,0,0,16250,2375
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16542,0,0,0,0,0,0,16666,3000
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17625,0,0,0,0,0,0,17709,3958
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18583,0,0,0,0,0,0,18666,4584
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15959,0,0,0,0,0,0,16042,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16833,0,0,0,0,0,0,16875,3291
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17792,0,0,0,0,0,0,17875,4209
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18208,0,0,0,0,0,0,18292,4458
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15917,0,0,0,0,0,0,16000,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16666,0,0,0,0,0,0,16708,2959
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17500,0,0,0,0,0,0,17583,3792
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18000,0,0,0,0,0,0,18084,4458
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15875,0,0,0,0,0,0,15958,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16459,0,0,0,0,0,0,16541,2958
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17625,0,0,0,0,0,0,17708,3959
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17791,0,0,0,0,0,0,17875,4417
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15958,0,0,0,0,0,0,16042,2292
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16625,0,0,0,0,0,0,16708,2917
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17791,0,0,0,0,0,0,17875,3958
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,20875,0,0,0,0,0,0,21000,7416
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16041,0,0,0,0,0,0,16125,2334
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16708,0,0,0,0,0,0,16792,2916
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17500,0,0,0,0,0,0,17583,3834
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18084,0,0,0,0,0,0,18166,4500
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15917,0,0,0,0,0,0,16000,2375
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16625,0,0,0,0,0,0,16667,2958
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17458,0,0,0,0,0,0,17500,3875
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17833,0,0,0,0,0,0,17959,4458
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16125,0,0,0,0,0,0,16250,2417
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16583,0,0,0,0,0,0,16667,2916
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,21333,0,0,0,0,0,0,21417,7625
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18000,0,0,0,0,0,0,18083,4459
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15750,0,0,0,0,0,0,15875,2375
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16708,0,0,0,0,0,0,16792,2917
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17542,0,0,0,0,0,0,17625,3875
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,23792,0,0,0,0,0,0,23875,10292
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15917,0,0,0,0,0,0,16000,2334
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16584,0,0,0,0,0,0,16666,2875
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17375,0,0,0,0,0,0,17459,3833
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,17959,0,0,0,0,0,0,18083,4500
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15792,0,0,0,0,0,0,15875,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16833,0,0,0,0,0,0,16917,2875
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17458,0,0,0,0,0,0,17584,3792
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18042,0,0,0,0,0,0,18125,4458
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,16667,0,0,0,0,0,0,16750,3125
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16542,0,0,0,0,0,0,16625,2833
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17916,0,0,0,0,0,0,18042,3792
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,20084,0,0,0,0,0,0,20167,6667
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15833,0,0,0,0,0,0,15917,2333
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,17583,0,0,0,0,0,0,17667,3833
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17541,0,0,0,0,0,0,17625,3833
+WIncrease,0,1,true,"accepted",0,1,20,20,1,2,2,2,0,0,20,false,2,2,18000,0,0,0,0,0,0,18083,4541
+TIncrease,0,1,true,"accepted",0,1,20,21,1,1,1,1,0,0,20,false,1,1,15833,0,0,0,0,0,0,15916,2292
+WDecrease,0,1,true,"accepted",0,1,20,20,1,1,2,0,1,0,20,false,1,2,16791,0,0,0,0,0,0,16875,2959
+TDecrease,0,1,true,"accepted",0,1,20,19,1,2,3,1,0,1,20,false,2,3,17500,0,0,0,0,0,0,17583,3834

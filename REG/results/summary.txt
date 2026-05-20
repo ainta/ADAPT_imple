@@ -1,0 +1,12 @@
+mode=none
+reg_adapt_20_10_none rows=120 accepted=120 avg_metadata_us=18.99 avg_cert_online_ms=0.000 avg_cert_full_ms=0.000 avg_local_ms=10.158 avg_total_ms=10.178 avg_exact_audit_us=0.00
+reg_adapt_40_20_none rows=120 accepted=120 avg_metadata_us=16.11 avg_cert_online_ms=0.000 avg_cert_full_ms=0.000 avg_local_ms=28.085 avg_total_ms=28.102 avg_exact_audit_us=0.00
+reg_adapt_80_40_none rows=120 accepted=120 avg_metadata_us=20.13 avg_cert_online_ms=0.000 avg_cert_full_ms=0.000 avg_local_ms=158.779 avg_total_ms=158.800 avg_exact_audit_us=0.00
+mode=online
+reg_adapt_20_10_online rows=120 accepted=120 avg_metadata_us=23.33 avg_cert_online_ms=6.871 avg_cert_full_ms=0.000 avg_local_ms=12.001 avg_total_ms=18.897 avg_exact_audit_us=0.00
+reg_adapt_40_20_online rows=120 accepted=120 avg_metadata_us=17.06 avg_cert_online_ms=12.023 avg_cert_full_ms=0.000 avg_local_ms=29.437 avg_total_ms=41.479 avg_exact_audit_us=0.00
+reg_adapt_80_40_online rows=120 accepted=120 avg_metadata_us=17.05 avg_cert_online_ms=48.859 avg_cert_full_ms=0.000 avg_local_ms=143.988 avg_total_ms=192.866 avg_exact_audit_us=0.00
+mode=full
+reg_adapt_20_10_full rows=120 accepted=120 avg_metadata_us=17.71 avg_cert_online_ms=0.000 avg_cert_full_ms=4.966 avg_local_ms=8.618 avg_total_ms=13.603 avg_exact_audit_us=0.00
+reg_adapt_40_20_full rows=120 accepted=120 avg_metadata_us=16.65 avg_cert_online_ms=0.000 avg_cert_full_ms=12.156 avg_local_ms=29.100 avg_total_ms=41.274 avg_exact_audit_us=0.00
+reg_adapt_80_40_full rows=120 accepted=120 avg_metadata_us=18.89 avg_cert_online_ms=0.000 avg_cert_full_ms=53.232 avg_local_ms=153.022 avg_total_ms=206.276 avg_exact_audit_us=0.00
